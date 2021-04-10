@@ -12,7 +12,7 @@ func TestToBytes(t *testing.T) {
 		t.Errorf("ToBytes failed, expected %v to be nil", err)
 	}
 
-	if len(b) != 5 {
+	if len(b) != 11 {
 		t.Errorf("ToBytes failed, expected %v to be of length", b)
 	}
 }

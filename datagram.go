@@ -8,11 +8,11 @@ import (
 
 type Datagram struct {
 	Id int8
+	Data [10]byte
 }
 
 func (p *Datagram) ToBytes() ([]byte, error) {
 	buf := new(bytes.Buffer)
-
 	if err := binary.Write(buf, binary.LittleEndian, p); err != nil {
 		return nil, err
 	}
